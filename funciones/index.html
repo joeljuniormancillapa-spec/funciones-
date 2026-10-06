@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones de JavaScript</title>
+    <style>
+        label {
+            display: block;
+            margin-top: 0.75rem;
+        }
+
+        input {
+            display: block;
+            margin-top: 0.25rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Funciones de JavaScript</h1>
+    <form id="calculadora-formulario">
+        <h2>Ingresa los datos</h2>
+        <p>Los mismos valores numéricos y el mismo texto se usan en las funciones relacionadas.</p>
+
+        <label for="numero-a">Primer número:</label>
+        <input id="numero-a" name="numeroA" type="number" value="10" step="any" required>
+
+        <label for="numero-b">Segundo número:</label>
+        <input id="numero-b" name="numeroB" type="number" value="5" step="any" required>
+
+        <label for="edad">Edad:</label>
+        <input id="edad" name="edad" type="number" value="20" min="0" required>
+
+        <label for="anio-nacimiento">Año de nacimiento:</label>
+        <input id="anio-nacimiento" name="anioNacimiento" type="number" value="1995" min="1" required>
+
+        <label for="nombre">Nombre:</label>
+        <input id="nombre" name="nombre" type="text" value="Carlos" required>
+
+        <label for="texto">Texto:</label>
+        <input id="texto" name="texto" type="text" value="Hola Mundo" required>
+
+        <label for="numero-paridad">Número para saber si es par o impar:</label>
+        <input id="numero-paridad" name="numeroParidad" type="number" value="8" step="any" required>
+
+        <label for="numero-c">Tercer número:</label>
+        <input id="numero-c" name="numeroC" type="number" value="23" step="any" required>
+
+        <label for="lista-numeros">Números para el promedio (separados por comas):</label>
+        <input id="lista-numeros" name="listaNumeros" type="text" value="10, 20, 30, 40" required>
+
+        <label for="fecha-nacimiento">Fecha de nacimiento:</label>
+        <input id="fecha-nacimiento" name="fechaNacimiento" type="date" value="1995-06-15" required>
+
+        <label for="longitud-id">Longitud del ID:</label>
+        <input id="longitud-id" name="longitudId" type="number" value="10" min="1" max="32" required>
+
+        <button type="submit">Calcular resultados</button>
+    </form>
+
+    <script src="../js/matematicas/operaciones.js"></script>
+    <script src="../js/texto/cadenas.js"></script>
+    <script src="../js/fechas/tiempo.js"></script>
+    <script src="../js/validaciones/reglas.js"></script>
+    <script src="../js/utilidades/helpers.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+</html>
