@@ -57,6 +57,10 @@ h1 {
     box-shadow: 0 18px 50px rgb(39 62 102 / 9%);
 }
 
+.panel-resultados {
+    margin-top: 24px;
+}
+
 .titulo-tarjeta {
     margin-bottom: 26px;
 }
@@ -64,6 +68,26 @@ h1 {
 h2 {
     margin: 0 0 7px;
     font-size: 1.35rem;
+}
+
+.rejilla-resultados {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin: 20px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.rejilla-resultados li {
+    min-width: 0;
+    padding: 12px 14px;
+    border: 1px solid #e6ebf3;
+    border-radius: 9px;
+    background: #f8faff;
+    color: #34415a;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
 }
 
 .rejilla-campos {
@@ -140,6 +164,10 @@ button:focus-visible {
     .rejilla-campos {
         grid-template-columns: 1fr;
         gap: 16px;
+    }
+
+    .rejilla-resultados {
+        grid-template-columns: 1fr;
     }
 
     .campo-ancho {

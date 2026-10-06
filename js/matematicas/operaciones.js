@@ -24,3 +24,19 @@ function calcularPromedio(numeros) {
     const suma = numeros.reduce((acc, n) => acc + n, 0);
     return suma / numeros.length;
 }
+
+function calcularPotencia(base, exponente) {
+    return base ** exponente;
+}
+
+function calcularFactorial(numero) {
+    if (!Number.isInteger(numero) || numero < 0) {
+        return "Ingresa un número entero igual o mayor que 0";
+    }
+
+    let resultado = 1;
+    for (let factor = 2; factor <= numero; factor++) {
+        resultado *= factor;
+    }
+    return resultado;
+}

@@ -1,5 +1,6 @@
 const formulario = document.getElementById("calculadora-formulario");
 const campoListaNumeros = document.getElementById("lista-numeros");
+const listaResultados = document.getElementById("resultados");
 
 campoListaNumeros.addEventListener("input", () => {
     campoListaNumeros.setCustomValidity("");
@@ -43,11 +44,21 @@ formulario.addEventListener("submit", (evento) => {
         `Promedio: ${calcularPromedio(numeros)}`,
         `Días desde la fecha indicada: ${diasVividos(fechaNacimiento)}`,
         `ID generado: ${generarID(longitudId)}`,
-        `Texto en mayúsculas: ${aMayusculas(texto)}`
+        `Texto en mayúsculas: ${aMayusculas(texto)}`,
+        `Potencia (${numeroA} elevado a ${numeroB}): ${calcularPotencia(numeroA, numeroB)}`,
+        `Factorial de ${numeroA}: ${calcularFactorial(numeroA)}`,
+        `Palabras en el texto: ${contarPalabras(texto)}`,
+        `¿El texto es palíndromo?: ${esPalindromo(texto) ? "Sí" : "No"}`
     ];
 
     console.group("Resultados de las funciones");
-    resultados.forEach((resultado) => console.log(resultado));
+    listaResultados.replaceChildren();
+    resultados.forEach((resultado) => {
+        console.log(resultado);
+        const elemento = document.createElement("li");
+        elemento.textContent = resultado;
+        listaResultados.appendChild(elemento);
+    });
     console.groupEnd();
 });
 
